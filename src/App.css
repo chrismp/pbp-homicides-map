@@ -1,0 +1,135 @@
+/* _________________________________________________________________________ */
+/* General styles */
+
+:root {
+    --side-padding: 20px;
+    --section-padding: 40px;
+    font-size: 18px;
+}
+
+a {
+    box-shadow: inset 0 -1px#fff, inset 0 -3px #009bff;
+    font-weight: 400;
+    text-decoration: none;
+    color: inherit;
+}
+
+/* _________________________________________________________________________ */
+/* React modal */
+
+.ReactModal__Body--open,
+.ReactModal__Html--open {
+  overflow: hidden;
+}
+
+.ReactModal__Overlay {
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 100ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+    opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+    opacity: 0;
+}
+
+/* _________________________________________________________________________ */
+/* Loading screen */
+
+.loading-screen {
+    background: #d5d5d3;
+    height: 100vh;
+    font-size: 30px;
+    text-align: center;
+}
+
+.loading--innards {
+    position: relative;
+    top: 50%;
+    transform: translate(0px, -50%);
+}
+
+.loading--label {
+    padding-left: 10px;
+}
+
+/* _________________________________________________________________________ */
+/* Map container */
+
+.Container--Map {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    height: 60vh;
+}
+
+.Container--Map a {
+    box-shadow: none;
+}
+
+/* _________________________________________________________________________ */
+/* Filter */
+
+.Container--Filters {
+    box-sizing: border-box;
+    padding: var(--section-padding) var(--side-padding);
+    clear: both;
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+.Container--Filters h2 {
+    color: var(--dark-color);
+}
+
+/* _________________________________________________________________________ */
+/* List */
+
+.Container--List {
+    padding: var(--section-padding) var(--side-padding);
+    clear: both;
+}
+
+
+/* _________________________________________________________________________ */
+/* Resources */
+
+.Resources ul {
+    margin-top: 0px;
+}
+
+.Resources li {
+    margin: 8px auto;
+}
+
+/* _________________________________________________________________________ */
+/* Mobile */
+
+@media (max-width: 768px) {
+    .Container--Intro,
+    .Container--Map {
+        float: none;
+        width: 100%;
+        height: 75vh;
+    }
+
+    .Map--Expand-Button {
+        display: none;
+    }
+
+    .Card--Chunk-Left {
+        width: 80px;
+    }
+    
+    .Card--Chunk-Right {
+        width: calc(100% - 80px);
+    }
+    
+    .Card--Image {
+        width: 80px;
+        height: 80px;
+    }
+}
