@@ -40,9 +40,9 @@ const styles = theme => ({
 });
 
 class Filters extends React.Component {
-    handleChangeUCR = (UCR) => {
-        this.props.onChangeUCR(UCR);
-    }
+    // handleChangeUCR = (UCR) => {
+    //     this.props.onChangeUCR(UCR);
+    // }
 
     handleChangeYear = (year) => {
         this.props.onChangeYear(year);
@@ -57,7 +57,7 @@ class Filters extends React.Component {
     }
 
     render() {
-        const {homicides, UCR, year, classes, details, detailFiltersSpec} = this.props;
+        const {homicides, year, classes, details, detailFiltersSpec} = this.props;
         const detailFilters = detailFiltersSpec.filters
             .map((filterSpec) => {
                 const { id } = filterSpec;
