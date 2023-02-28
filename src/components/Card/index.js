@@ -222,15 +222,20 @@ class Card extends React.Component {
         const {classes} = this.props;
         const {coverage} = homicide;
         if (coverage.length === 0) return null;
-        const stories = coverage
-            .map((story, i) => {
-                const {link, headline} = story;
-                return (
-                    <div className={classes.story} key={`${homicide.id}--${i}`}>
-                        <a href={link} target="_blank" rel="noopener noreferrer">{headline}</a>
+        const stories = [
+                    <div className={classes.story} key={`${homicide.id}--1`}>
+                        <a href={coverage.link} target="_blank" rel="noopener noreferrer">{coverage.headline}</a>
                     </div>
-                );
-            });
+            ];
+        // const stories = coverage
+        //     .map((story, i) => {
+        //         const {link, headline} = story;
+        //         return (
+        //             <div className={classes.story} key={`${homicide.id}--${i}`}>
+        //                 <a href={link} target="_blank" rel="noopener noreferrer">{headline}</a>
+        //             </div>
+        //         );
+        //     });
         return (
             <div className={classNames(classes.item, classes.coverage)}>
                 <div className={classes.subhead}>Coverage</div>
@@ -330,7 +335,7 @@ class Card extends React.Component {
                     <div className={classNames(classes.subhead, classes.subheadDiedOn)}>Died on</div>
                     <div className={classes.homicideTime}>{homicide.crimeDate.formatted}</div>
                     <span className={classes.separator}>|</span>
-                    <div className={classes.homicideLocation}>{homicide.crimeSceneAddress.trim()}</div>
+                    <div className={classes.homicideLocation}>{homicide.crimeSceneAddress==null ? "" : homicide.crimeSceneAddress.trim()}</div>
                     <AnimateHeight
                         duration={333}
                         animateOpacity={true}

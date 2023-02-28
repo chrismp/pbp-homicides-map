@@ -144,9 +144,8 @@ class App extends Component {
 
   getVisibleHomicides = () => {
     const detailFilters = this.detailFilters();
-
     const filters = (d) => {
-      return [this.dateFilter(d), this.ucrFilter(d)].concat(detailFilters(d));
+      return [this.dateFilter(d)].concat(detailFilters(d));
     };
 
     return this.state.homicides
