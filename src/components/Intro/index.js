@@ -44,33 +44,34 @@ class Intro extends React.Component {
     render() {
         const {classes, homicides} = this.props;
 
-        const h = homicides
-            .filter(d => d.isUCRReportable)
-            .map(d => d.crimeDate.iso);
+        const h = homicides.map(d => d.crimeDate.date);
         
         const thisYearDate = new Date();
         const lastYearDate = new Date();
 
-        lastYearDate.setFullYear(2021);
+        lastYearDate.setFullYear(thisYearDate.getFullYear()-1);
 
-        const numLastYear = h
-            .filter(d => (d.getFullYear() === 2021 && d <= lastYearDate))
+        var thisYear = thisYearDate.getFullYear();
+        var lastYear = lastYearDate.getFullYear();
+
+        const homicidesLastYear = h
+            .filter(d => d===null ? '' : (d.getFullYear() === lastYear && d <= lastYearDate))
             .length;
 
-        const numThisYear = h
-            .filter(d => (d.getFullYear() === 2022 && d <= thisYearDate))
+        const homicidesThisYear = h
+            .filter(d => d===null ? '' : (d.getFullYear() === thisYear && d <= thisYearDate))
             .length;
 
-        const difference = numThisYear - numLastYear;
+        const difference = homicidesThisYear - homicidesLastYear;
         let comparisonWord = 'more';
         if (difference < 0) comparisonWord = 'fewer';
-        const absDifference = Math.abs(difference);
-        return (
+        const absDifference = Math.abs(difference); 
+       return (
             <div className={classes.root}>
                 <div className={classes.innards}>
                     <Typography variant="inherit" paragraph={true}>
                         There have been <br/>
-                        <span className={classes.highlight}>{numThisYear} homicides</span> in 2022.
+                        <span className={classes.highlight}>{homicidesThisYear} homicides so far</span> in {thisYear}.
                     </Typography>
                     <Typography variant="inherit" paragraph={true}>
                         This is <span className={classes.highlight}>{absDifference} {comparisonWord}</span> than last year at this date.

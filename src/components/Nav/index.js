@@ -63,7 +63,7 @@ class Nav extends React.Component {
                         <img className={classes.badge} src="media/badge.png" alt="Badge icon for Milwaukee Journal Sentinel" />
                         <img className={classes.logo} src="media/logo.png" alt="Logo text for Milwaukee Journal Sentinel" />
                         <Typography className={classes.h1} variant="h1" color="inherit">
-                            Milwaukee Homicides
+                            Palm Beach County Homicides
                         </Typography>
                         <div className={classes.buttonContainer}>
                             <Button className={classes.moreInfo} onClick={onClickMoreInfo} color="inherit">

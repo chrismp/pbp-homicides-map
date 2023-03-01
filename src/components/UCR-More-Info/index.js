@@ -47,11 +47,6 @@ class UCRMoreInfo extends React.Component {
                             <i className="fas fa-times"></i>
                         </Button>
                     </div>
-
-                    <h3>About UCR homicides</h3>
-                    <p>Most, but not all, homicides are reported to the federal government as part of the FBI Uniform Crime Reporting system.</p>
-                    <p>This national crime reporting standard does not include killings deemed self-defense in its homicide total. Instead, those deaths are tracked separately as justifiable homicide.</p>
-                    <p>The Milwaukee Police Department and Milwaukee Homicide Review Commission — and the Milwaukee Journal Sentinel — typically use the number of UCR homicides in public reports because UCR standards provide a consistent way to compare years of data.</p>
                 </div>
             </ReactModal>
         );
