@@ -54,6 +54,10 @@ const ageFilter = {
             label: '50+',
             filter: ({victim}) => 50 <= victim.ageAtDeath.raw,
         },
+        {
+            label: 'Unknown',
+            filter: ({victim}) => victim.ageAtDeath.raw === 'unknown',
+        },        
     ],
 };
 
@@ -61,30 +65,34 @@ const causeFilter = {
     key: 'cause',
     label: 'Cause of death',
     choices: [
-        {
-            label: 'Abuse',
-            filter: ({homicideAction}) => homicideAction === 'abuse',
-        },
-        {
-            label: 'Arson',
-            filter: ({homicideAction}) => homicideAction === 'arson',
-        },
+        // {
+        //     label: 'Abuse',
+        //     filter: ({homicideAction}) => homicideAction === 'abuse',
+        // },
+        // {
+        //     label: 'Arson',
+        //     filter: ({homicideAction}) => homicideAction === 'arson',
+        // },
         {
             label: 'Beaten',
-            filter: ({homicideAction}) => homicideAction === 'beaten',
-        },
-        {
-            label: 'Other',
-            filter: ({homicideAction}) => ['shot', 'stabbed', 'abuse', 'beaten', 'arson'].indexOf(homicideAction) < 0,
+            filter: ({homicideAction}) => ['trauma','beaten'].some(substr => homicideAction.toLowerCase().includes(substr)),
         },
         {
             label: 'Shot',
-            filter: ({homicideAction}) => homicideAction === 'shot',
+            filter: ({homicideAction}) => homicideAction.toLowerCase() === 'shot',
         },
         {
             label: 'Stabbed',
-            filter: ({homicideAction}) => homicideAction === 'stabbed',
+            filter: ({homicideAction}) => homicideAction.toLowerCase() === 'stabbed',
         },
+        {
+            label: 'Other',
+            filter: ({homicideAction}) => homicideAction.toLowerCase() === 'other' | ['shot', 'stabbed', 'beaten', 'trauma', 'unknown'].every(substr => !homicideAction.toLowerCase().includes(substr))
+        },
+        {
+            label: 'Unknown',
+            filter: ({homicideAction}) => homicideAction.toLowerCase().includes('unknown')
+        }     
     ],
 };
 
@@ -94,27 +102,27 @@ const raceFilter = {
     choices: [
         {
             label: 'Asian',
-            filter: ({victim}) => victim.race === 'asian',
+            filter: ({victim}) => victim.race.toLowerCase() === 'asian',
         },
         {
             label: 'Black',
-            filter: ({victim}) => victim.race === 'black',
+            filter: ({victim}) =>  victim.race.toLowerCase() === 'black',
         },
         {
             label: 'Hispanic',
-            filter: ({victim}) => victim.race === 'hispanic',
+            filter: ({victim}) =>  victim.race.toLowerCase() === 'hispanic',
         },
         {
             label: 'White',
-            filter: ({victim}) => victim.race === 'white',
+            filter: ({victim}) =>  victim.race.toLowerCase() === 'white',
         },
         {
             label: 'Other',
-            filter: ({victim}) => ['black', 'white', 'hispanic', 'asian', 'unknown'].indexOf(victim.race) < 0,
+            filter: ({victim}) =>  ['black', 'white', 'hispanic', 'asian', 'unknown'].indexOf(victim.race.toLowerCase()) < 0 | victim.race.toLowerCase() === 'other',
         },
         {
             label: 'Unknown',
-            filter: ({victim}) => victim.race === 'unknown',
+            filter: ({victim}) => victim.race.toLowerCase() === 'unknown',
         },
     ],
 };
@@ -125,36 +133,40 @@ const genderFilter = {
     choices: [
         {
             label: 'Male',
-            filter: ({victim}) => victim.gender === 'male',
+            filter: ({victim}) => victim.gender.toLowerCase() === 'male',
         },
         {
             label: 'Female',
-            filter: ({victim}) => victim.gender === 'female',
+            filter: ({victim}) => victim.gender.toLowerCase() === 'female',
         },
+        {
+            label: 'Unknown',
+            filter: ({victim}) => victim.gender.toLowerCase() === 'unknown',
+        },        
     ],
 };
 
-const chargesFilter = {
-    key: 'charges',
-    label: 'Charges filed',
-    choices: [
-        {
-            label: 'Yes',
-            filter: ({wereChargesFiled}) => wereChargesFiled,
-        },
-        {
-            label: 'No',
-            filter: ({wereChargesFiled}) => !wereChargesFiled,
-        },
-    ],
-};
+// const chargesFilter = {
+//     key: 'charges',
+//     label: 'Charges filed',
+//     choices: [
+//         {
+//             label: 'Yes',
+//             filter: ({wereChargesFiled}) => wereChargesFiled,
+//         },
+//         {
+//             label: 'No',
+//             filter: ({wereChargesFiled}) => !wereChargesFiled,
+//         },
+//     ],
+// };
 
 const filters = [
     ageFilter,
     causeFilter,
     raceFilter,
     genderFilter,
-    chargesFilter,
+    // chargesFilter,
 ];
 
 filters.forEach((filter, i) => {
