@@ -75,23 +75,23 @@ const causeFilter = {
         // },
         {
             label: 'Beaten',
-            filter: ({homicideAction}) => ['trauma','beaten'].some(substr => homicideAction.toLowerCase().includes(substr)),
+            filter: ({homicideAction}) => ['trauma','beaten'].some(substr => homicideAction.includes(substr)),
         },
         {
             label: 'Shot',
-            filter: ({homicideAction}) => homicideAction.toLowerCase() === 'shot',
+            filter: ({homicideAction}) => homicideAction === 'shot',
         },
         {
             label: 'Stabbed',
-            filter: ({homicideAction}) => homicideAction.toLowerCase() === 'stabbed',
+            filter: ({homicideAction}) => homicideAction === 'stabbed',
         },
         {
             label: 'Other',
-            filter: ({homicideAction}) => homicideAction.toLowerCase() === 'other' | ['shot', 'stabbed', 'beaten', 'trauma', 'unknown'].every(substr => !homicideAction.toLowerCase().includes(substr))
+            filter: ({homicideAction}) => homicideAction === 'other' | ['shot', 'stabbed', 'beaten', 'trauma', 'unknown'].every(substr => !homicideAction.includes(substr))
         },
         {
             label: 'Unknown',
-            filter: ({homicideAction}) => homicideAction.toLowerCase().includes('unknown')
+            filter: ({homicideAction}) => homicideAction.includes('unknown')
         }     
     ],
 };
@@ -102,27 +102,27 @@ const raceFilter = {
     choices: [
         {
             label: 'Asian',
-            filter: ({victim}) => victim.race.toLowerCase() === 'asian',
+            filter: ({victim}) => victim.race === 'asian',
         },
         {
             label: 'Black',
-            filter: ({victim}) =>  victim.race.toLowerCase() === 'black',
+            filter: ({victim}) =>  victim.race === 'black',
         },
         {
             label: 'Hispanic',
-            filter: ({victim}) =>  victim.race.toLowerCase() === 'hispanic',
+            filter: ({victim}) =>  victim.race === 'hispanic',
         },
         {
             label: 'White',
-            filter: ({victim}) =>  victim.race.toLowerCase() === 'white',
+            filter: ({victim}) =>  victim.race === 'white',
         },
         {
             label: 'Other',
-            filter: ({victim}) =>  ['black', 'white', 'hispanic', 'asian', 'unknown'].indexOf(victim.race.toLowerCase()) < 0 | victim.race.toLowerCase() === 'other',
+            filter: ({victim}) =>  ['black', 'white', 'hispanic', 'asian', 'unknown'].indexOf(victim.race) < 0 | victim.race === 'other',
         },
         {
             label: 'Unknown',
-            filter: ({victim}) => victim.race.toLowerCase() === 'unknown',
+            filter: ({victim}) => victim.race === 'unknown',
         },
     ],
 };
@@ -133,15 +133,15 @@ const genderFilter = {
     choices: [
         {
             label: 'Male',
-            filter: ({victim}) => victim.gender.toLowerCase() === 'male',
+            filter: ({victim}) => victim.gender === 'male',
         },
         {
             label: 'Female',
-            filter: ({victim}) => victim.gender.toLowerCase() === 'female',
+            filter: ({victim}) => victim.gender === 'female',
         },
         {
             label: 'Unknown',
-            filter: ({victim}) => victim.gender.toLowerCase() === 'unknown',
+            filter: ({victim}) => victim.gender === 'unknown',
         },        
     ],
 };
