@@ -205,18 +205,18 @@ class Card extends React.Component {
         return <span>{cause}</span>;
     }
 
-    getChargesSentence = (homicide) => {
-        const chargesFiled = homicide.wereChargesFiled === true;
-        let count = 'No charges';
-        if (chargesFiled) {
-            count = 'Charges';
-        }
-        return (
-            <span>
-                {count} have been filed in this homicide.
-            </span>
-        )
-    }
+    // getChargesSentence = (homicide) => {
+    //     const chargesFiled = homicide.wereChargesFiled === true;
+    //     let count = 'No charges';
+    //     if (chargesFiled) {
+    //         count = 'Charges';
+    //     }
+    //     return (
+    //         <span>
+    //             {count} have been filed in this homicide.
+    //         </span>
+    //     )
+    // }
     
     getCoverage(homicide) {
         const {classes} = this.props;
@@ -277,9 +277,9 @@ class Card extends React.Component {
                 <p>
                     {this.getAgeSentence(victim, personalPronoun)}
                 </p>
-                <p>
+{/*                <p>
                     {this.getChargesSentence(homicide)}
-                </p>
+                </p>*/}
 
                 {/* Coverage */}
                 {this.getCoverage(homicide)}
