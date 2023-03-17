@@ -203,10 +203,13 @@ class Card extends React.Component {
 
     getCauseOfDeath(homicide) {
         const {homicideAction} = homicide;
-        let cause = 'died due to unknown cause';
+        // let cause = 'died due to unknown cause';
+        let cause = 'been killed';
 
         if (homicideAction !== null) {
             if (homicideAction === 'shot') cause = 'been fatally shot';
+            if (homicideAction === 'stabbed') cause = 'been fatally stabbed';
+            if (['trauma','beaten'].some(substr => homicideAction.includes(substr))) cause = 'been fatally beaten';
         }
         return <span>{cause}</span>;
     }
