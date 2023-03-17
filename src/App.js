@@ -80,7 +80,7 @@ class App extends Component {
       showMoreInfo: false,
       showExpandedMap: false,
       UCR: true,
-      year: 2022,
+      year: new Date().getFullYear(),
       details: initialDetails,
       viewport: initialViewport,
       expandedCard: null,
