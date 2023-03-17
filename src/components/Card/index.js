@@ -182,7 +182,7 @@ class Card extends React.Component {
     };
 
     getAgeSentence(victim, personalPronoun) {
-        if (victim.ageAtDeath === undefined) return null;
+        if (victim.ageAtDeath.raw === undefined || victim.ageAtDeath.raw === 'unknown') return null;
         const age = victim.ageAtDeath.raw;
         let ess = 's';
         if (age === 1) ess = '';
@@ -193,6 +193,12 @@ class Card extends React.Component {
                 {titleCase(personalPronoun)} was {years} old when {personalPronoun} died.
             </span>
         );
+    }
+
+    getFullName(victim) {
+        let name = victim.fullName;
+        if(name.toLowerCase().startsWith('unknown')) name = 'An '+name.toLowerCase();
+        return name;
     }
 
     getCauseOfDeath(homicide) {
@@ -270,7 +276,7 @@ class Card extends React.Component {
             <div className={classes.moreInfo}>
                 <div className={classes.moreInfoSeparator}></div>
                 <p>
-                    {victim.fullName} was found to have {this.getCauseOfDeath(homicide)} on {homicide.crimeDate.formatted}
+                    {this.getFullName(victim)} was found to have {this.getCauseOfDeath(homicide)} on {homicide.crimeDate.formatted}
                     . {titleCase(personalPronoun)} was discovered at {homicide.crimeSceneAddress}, and the Milwaukee County Medical
                     Examiner ruled {possessivePronoun} death a homicide.
                 </p>
