@@ -275,22 +275,25 @@ class App extends Component {
             {map}
           </div>
           <div className="Container--Filters">
-            <h2>Homicide victims</h2>
+            <h2>About this homicide tracker</h2>
             <p>
-              The Journal Sentinel is tracking homicides in Milwaukee to memorialize the victims and
-              better understand deadly violence in the city. The tracker is updated as regularly as
-              possible.
+              The Palm Beach Post has been tracking each homicide in Palm Beach County dating back to 2009. 
             </p>
             <p>
-              Anyone with information about these homicide cases can call Milwaukee police at
-              (414) 935-7360. Callers can remain anonymous.
+              The tracker is a compilation of law-enforcement and coroner data. It has each victim's race, gender and age as well as the time and place of the killing. 
             </p>
             <p>
-              Help us remember homicide victims: Please email photos to <a href="mailto:jsmetro@jrn.com?subject=Homicide%20Tracker%20Submission">jsmetro@jrn.com</a> with the
-              victim's name, as well as your name and contact information so a reporter or editor
-              can follow up.
+              Brief narratives offer insight into what happened and links at the bottom of each entry direct to additional reporting on the case.
+              Arguably the database's most important role is the visual representation of both where homicides are occurring in the county and to whom.
             </p>
             <p>
+              Hundreds of photos of parents, siblings, children and friends comprise the tracker.            
+            </p>
+            <p>
+              <strong>Help us remember homicide victims:</strong> Please email photos or other information to <a href="mailto:homicides@pbpost.com?subject=Homicide%20Tracker%20photo">homicides@pbpost.com</a> with the
+              victim's name. You can also include your name and contact information if you want to talk to a reporter or editor.
+            </p>
+{/*            <p>
               The FBI's Uniform Crime Reporting (UCR) criteria for homicides is used by the Milwaukee
               Journal Sentinel and law enforcement agencies for consistent comparisons between years.
               <Button
@@ -305,15 +308,15 @@ class App extends Component {
                 </i>
                 Learn more
               </Button>
-            </p>
-            <p><b>STORY:</b> <a href="https://projects.jsonline.com/news/2019/3/21/milwaukee-murders-many-unsolved-fewer-than-half-end-with-convictions.html">In Milwaukee, less than half of all homicides end in a suspect convicted of a crime. What that does to a family – and a city.</a></p>
+            </p>*/}
+{/*            <p><b>STORY:</b> <a href="https://projects.jsonline.com/news/2019/3/21/milwaukee-murders-many-unsolved-fewer-than-half-end-with-convictions.html">In Milwaukee, less than half of all homicides end in a suspect convicted of a crime. What that does to a family – and a city.</a></p>
             <div className="Resources">
               <b>RESOURCES:</b>
               <ul>
                 <li><a href="https://www.jsonline.com/story/news/special-reports/milwaukee-violence/2019/03/21/how-find-support-during-grieving-process-after-homicide/3149817002/">Grieving after a death? Here’s a list of organizations you can turn to for support</a></li>
                 <li><a href="https://www.jsonline.com/story/news/special-reports/milwaukee-violence/2019/03/21/how-help-families-homicide-victims-milwaukee/3148130002/">Lost someone to homicide or want to help someone who has? Here’s a list of organizations making a difference in Milwaukee</a></li>
               </ul>
-            </div>
+            </div>*/}
   
             <HomicideCount count={homicides.length} />
   
