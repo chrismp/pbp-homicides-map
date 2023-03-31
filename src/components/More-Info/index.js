@@ -50,11 +50,11 @@ class MoreInfo extends React.Component {
                 style={modalStyle}
                 onRequestClose={onClose}>
                 <div className={classes.moreInfo}>
-                    <h2>About the Milwaukee Homicide Database</h2>
-                    <Typography variant="p" paragraph={true}>The Journal Sentinel is tracking homicides in Milwaukee to memorialize the victims and better understand deadly violence in the city. The tracker is updated as regularly as possible.</Typography>
-                    <Typography variant="p" paragraph={true}>Anyone with information about these homicide cases can call Milwaukee police at (414) 935-7360. Callers can remain anonymous.</Typography>
+                    <h2>About the Palm Beach County Homicide Database</h2>
+                    <Typography variant="p" paragraph={true}>The Palm Beach Post is tracking homicides in Palm Beach County to memorialize the victims and better understand deadly violence here. The tracker is updated as regularly as possible.</Typography>
+                    <Typography variant="p" paragraph={true}>Anyone with information about these homicide cases can call Crime Stoppers of Palm Beach County at 800-458-TIPS (8477). Callers can remain anonymous.</Typography>
                     <Divider className={classes.divider} light={true} />
-                    <Typography color="textSecondary" className={classes.sources} variant="p" paragraph={true}>Sources: Milwaukee Police Department, Milwaukee Homicide Review Commission, court records and Journal Sentinel analysis</Typography>
+                    <Typography color="textSecondary" className={classes.sources} variant="p" paragraph={true}>Sources: Palm Beach County Sheriff's Office, municipal departments in Palm Beach County, Palm Beach County Medical Examiner's Office, court records and Palm Beach Post analysis</Typography>
                     <div className={classes.buttonContainer}>
                         <Button
                             className={classes.button}

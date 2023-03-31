@@ -42743,7 +42743,7 @@
         "type": "Feature",
         "properties": {
           "crimeSceneAddress": "Near Boynton Inlet",
-          "id": "2018-046",
+          "id": "2018-044",
           "victim": "Baby June",
           "crimeDate": "June 1, 2018"
         }
@@ -42762,10 +42762,10 @@
         },
         "lastName": "June",
         "fullName": "Baby June",
-        "id": "2018-046"
+        "id": "2018-044"
       },
       "homicideAction": "unknown/undetermined",
-      "id": "2018-046",
+      "id": "2018-044",
       "publicDisplay": true
     },
     {
@@ -45479,7 +45479,7 @@
         "type": "Feature",
         "properties": {
           "crimeSceneAddress": "4200 block of Waverly Drive",
-          "id": "2018-100",
+          "id": "2018-101",
           "victim": "Jodi Anders",
           "crimeDate": "Dec. 21, 2018"
         }
@@ -45498,10 +45498,10 @@
         },
         "lastName": "Anders",
         "fullName": "Jodi Anders",
-        "id": "2018-100"
+        "id": "2018-101"
       },
       "homicideAction": "shot",
-      "id": "2018-100",
+      "id": "2018-101",
       "publicDisplay": true
     },
     {
@@ -65603,10 +65603,10 @@
         "photo": null,
         "birthDate": null,
         "gender": "male",
-        "race": "unknown",
+        "race": "black",
         "ageAtDeath": {
-          "raw": "unknown",
-          "formatted": "NA years"
+          "raw": "28",
+          "formatted": "28 years"
         },
         "lastName": "male",
         "fullName": "Unknown male",
@@ -65716,8 +65716,8 @@
       "crimeLocationLatitude": 26.7043,
       "crimeSceneAddress": "5000 block of Breckenridge Place",
       "coverage": {
-        "headline": null,
-        "link": null
+        "headline": "PBSO: Man argued with woman before fatal shooting at West Palm-area family gathering",
+        "link": "https://www.palmbeachpost.com/story/news/crime/2023/03/03/pbso-fatal-shooting-at-west-palm-family-gathering-began-with-argument/69958596007/"
       },
       "isUCRReportable": null,
       "wasArrestMade": null,
@@ -65758,6 +65758,150 @@
       },
       "homicideAction": "shot",
       "id": "2023-014",
+      "publicDisplay": true
+    },
+    {
+      "crimeLocationLatitude": null,
+      "crimeSceneAddress": "3600 block of Military Trail",
+      "coverage": {
+        "headline": "Man shot, killed at liquor store near Greenacres; PBSO seeks tips",
+        "link": "https://www.palmbeachpost.com/story/news/crime/2023/03/22/man-found-dead-from-gunshot-wound-at-greenacres-area-liquor-store/70037075007/"
+      },
+      "isUCRReportable": null,
+      "wasArrestMade": null,
+      "crimeDate": {
+        "date": "2023-03-21",
+        "formatted": "March 21, 2023"
+      },
+      "crimeLocationLongitude": null,
+      "suspects": null,
+      "geojson": {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [null, null]
+        },
+        "type": "Feature",
+        "properties": {
+          "crimeSceneAddress": "3600 block of Military Trail",
+          "id": "2023-015",
+          "victim": "Unknown male",
+          "crimeDate": "March 21, 2023"
+        }
+      },
+      "wereChargesFiled": null,
+      "victim": {
+        "bio": null,
+        "popupOverride": null,
+        "photo": null,
+        "birthDate": null,
+        "gender": "male",
+        "race": "unknown",
+        "ageAtDeath": {
+          "raw": "unknown",
+          "formatted": "NA years"
+        },
+        "lastName": "male",
+        "fullName": "Unknown male",
+        "id": "2023-015"
+      },
+      "homicideAction": "shot",
+      "id": "2023-015",
+      "publicDisplay": true
+    },
+    {
+      "crimeLocationLatitude": null,
+      "crimeSceneAddress": "1500 block of Magnolia Lane",
+      "coverage": {
+        "headline": null,
+        "link": null
+      },
+      "isUCRReportable": null,
+      "wasArrestMade": null,
+      "crimeDate": {
+        "date": "2023-03-26",
+        "formatted": "March 26, 2023"
+      },
+      "crimeLocationLongitude": null,
+      "suspects": null,
+      "geojson": {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [null, null]
+        },
+        "type": "Feature",
+        "properties": {
+          "crimeSceneAddress": "1500 block of Magnolia Lane",
+          "id": "2023-016",
+          "victim": "Unknown female",
+          "crimeDate": "March 26, 2023"
+        }
+      },
+      "wereChargesFiled": null,
+      "victim": {
+        "bio": null,
+        "popupOverride": null,
+        "photo": null,
+        "birthDate": null,
+        "gender": "female",
+        "race": "unknown",
+        "ageAtDeath": {
+          "raw": "unknown",
+          "formatted": "NA years"
+        },
+        "lastName": "female",
+        "fullName": "Unknown female",
+        "id": "2023-016"
+      },
+      "homicideAction": "strangled",
+      "id": "2023-016",
+      "publicDisplay": true
+    },
+    {
+      "crimeLocationLatitude": null,
+      "crimeSceneAddress": "1500 block of Summer Lake Drive",
+      "coverage": {
+        "headline": null,
+        "link": null
+      },
+      "isUCRReportable": null,
+      "wasArrestMade": null,
+      "crimeDate": {
+        "date": "2023-03-29",
+        "formatted": "March 29, 2023"
+      },
+      "crimeLocationLongitude": null,
+      "suspects": null,
+      "geojson": {
+        "geometry": {
+          "type": "Point",
+          "coordinates": [null, null]
+        },
+        "type": "Feature",
+        "properties": {
+          "crimeSceneAddress": "1500 block of Summer Lake Drive",
+          "id": "2023-017",
+          "victim": "Unknown male",
+          "crimeDate": "March 29, 2023"
+        }
+      },
+      "wereChargesFiled": null,
+      "victim": {
+        "bio": null,
+        "popupOverride": null,
+        "photo": null,
+        "birthDate": null,
+        "gender": "male",
+        "race": "unknown",
+        "ageAtDeath": {
+          "raw": "unknown",
+          "formatted": "NA years"
+        },
+        "lastName": "male",
+        "fullName": "Unknown male",
+        "id": "2023-017"
+      },
+      "homicideAction": "unknown",
+      "id": "2023-017",
       "publicDisplay": true
     }
   ]

@@ -60,8 +60,8 @@ class Nav extends React.Component {
                 <div className={classes.static}></div>
                 <AppBar position="fixed" className={classes.root}>
                     <Toolbar>
-                        <img className={classes.badge} src="media/badge.png" alt="Badge icon for Milwaukee Journal Sentinel" />
-                        <img className={classes.logo} src="media/logo.png" alt="Logo text for Milwaukee Journal Sentinel" />
+                        <img className={classes.badge} src="media/badge.png" alt="Badge icon for The Palm Beach Post" />
+                        <img className={classes.logo} src="media/logo.png" alt="Logo text for The Palm Beach Post" />
                         <Typography className={classes.h1} variant="h1" color="inherit">
                             Palm Beach County Homicides
                         </Typography>

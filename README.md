@@ -1,6 +1,6 @@
 # Homicides database
 
-A database that tracks homicides in Milwaukee to memorialize the victims and better understand deadly violence in the city.
+A database that tracks homicides in Palm Beach County to memorialize the victims and better understand deadly violence here.
 
 ## Develop
 

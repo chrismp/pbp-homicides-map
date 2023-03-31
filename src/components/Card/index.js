@@ -280,8 +280,8 @@ class Card extends React.Component {
                 <div className={classes.moreInfoSeparator}></div>
                 <p>
                     {this.getFullName(victim)} was found to have {this.getCauseOfDeath(homicide)} on {homicide.crimeDate.formatted}
-                    . {titleCase(personalPronoun)} was discovered at {homicide.crimeSceneAddress}, and the Milwaukee County Medical
-                    Examiner ruled {possessivePronoun} death a homicide.
+                    . {titleCase(personalPronoun)} was discovered at {homicide.crimeSceneAddress}{/*, and the Palm Beach County Medical
+                    Examiner ruled {possessivePronoun} death a homicide*/}.
                 </p>
                 <p>
                     {this.getAgeSentence(victim, personalPronoun)}
