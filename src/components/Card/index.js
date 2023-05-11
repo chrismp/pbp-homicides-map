@@ -257,16 +257,17 @@ class Card extends React.Component {
         const {classes} = this.props;
         const {id, victim} = homicide;
         const {photo} = victim;
-    
+        
         if (photo === undefined) {
             const src = `https://projects.jsonline.com/apps/Milwaukee-Homicide-Database/media/maps/${id}.png`
             return (
                 <img ref={this.photoRef} className={classes.image} src={src} alt={`Homicide victim: ${victim.fullName}`} />
             );
         }
-    
+        
+        const src = `new-mugs/${id}.jpg`
         return (
-            <img ref={this.photoRef} className={classes.image} src={photo} alt={`Homicide victim: ${victim.fullName}`} />
+            <img ref={this.photoRef} className={classes.image} src={src} alt={`Homicide victim: ${victim.fullName}`} />
         );
     }
 
