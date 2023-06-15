@@ -26,3 +26,6 @@ yarn-error.log*
 
 credentials.js
 /public/media/maps
+
+public/pbp-homicides-min.json
+public/pbp-homicides.json
